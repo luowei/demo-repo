@@ -12,7 +12,6 @@
     <artifactId>house-rent</artifactId>
 
 
-
     <properties>
         <springframework.version>3.1.2.RELEASE</springframework.version>
         <spring-data-jpa.version>1.1.0.RELEASE</spring-data-jpa.version>
@@ -91,6 +90,19 @@
             <version>${spring-data-jpa.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>${springframework.version}</version>
+        </dependency>
+
+        <!-- cglib -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>${cglib.version}</version>
+        </dependency>
+
         <!-- javassist -->
         <dependency>
             <groupId>org.javassist</groupId>
@@ -164,12 +176,44 @@
         </dependency>
 
 
-        <!-- LogTest -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.10</version>
+            <version>4.8</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${springframework.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>1.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.0-api</artifactId>
+            <version>1.0.0.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${hibernate.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- HSQL -->
+        <dependency>
+            <groupId>org.hsqldb</groupId>
+            <artifactId>hsqldb</artifactId>
+            <version>2.2.8</version>
+            <scope>runtime</scope>
         </dependency>
 
 
@@ -219,12 +263,13 @@
                     </webApp>
                     <connectors>
                         <connector implementation="org.eclipse.jetty.server.nio.SelectChannelConnector">
-                            <port>9090</port>
+                            <port>9091</port>
                             <maxIdleTime>60000</maxIdleTime>
                         </connector>
                     </connectors>
                 </configuration>
             </plugin>
+
 
         </plugins>
 
@@ -236,11 +281,15 @@
             </resource>
         </resources>
 
-        <filters>
-            <filter>src/main/filter/mavenFilters.properties</filter>
-        </filters>
 
     </build>
+
+    <!--<repositories>-->
+    <!--<repository>-->
+    <!--<id>serverNexus</id>-->
+    <!--<url>http://localhost:8081/nexus/content/groups/public/</url>-->
+    <!--</repository>-->
+    <!--</repositories>-->
 
 
 </project>

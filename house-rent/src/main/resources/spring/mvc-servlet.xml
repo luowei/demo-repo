@@ -15,6 +15,7 @@
     <mvc:annotation-driven/>
 
     <mvc:resources mapping="/resources/**" location="/resources/"/>
+
     <mvc:default-servlet-handler/>
 
 

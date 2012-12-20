@@ -11,6 +11,6 @@ import org.springframework.data.repository.PagingAndSortingRepository;
  * Time: 上午12:24
  * To change this template use File | Settings | File Templates.
  */
-public interface UserRepository extends PagingAndSortingRepository<User, Long>,
+public interface UserRepository extends PagingAndSortingRepository<User, Integer>,
         JpaSpecificationExecutor<User> {
 }

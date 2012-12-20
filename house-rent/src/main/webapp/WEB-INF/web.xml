@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="http://java.sun.com/xml/ns/javaee"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-         version="2.5">
-
-    <display-name>trade-impexp</display-name>
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+           version="2.5">
 
     <!-- load spring configuration -->
     <context-param>
@@ -12,10 +11,9 @@
         <param-value>classpath:spring/applicationContext-root.xml</param-value>
     </context-param>
 
-    <context-param>
-        <param-name>webAppRootKey</param-name>
-        <param-value>project.root</param-value>
-    </context-param>
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
 
     <filter>
         <filter-name>characterEncoding</filter-name>
@@ -25,22 +23,10 @@
             <param-value>UTF-8</param-value>
         </init-param>
     </filter>
-
     <filter-mapping>
         <filter-name>characterEncoding</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
-
-    <!-- Loads the Spring web application context -->
-    <listener>
-        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
-    </listener>
-
-    <!-- Log4j listener -->
-    <listener>
-        <listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
-    </listener>
-
 
     <servlet>
         <servlet-name>mvc</servlet-name>
@@ -52,9 +38,13 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
 
+
+
+
     <servlet-mapping>
         <servlet-name>mvc</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+
 
 </web-app>
