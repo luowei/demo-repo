@@ -11,6 +11,7 @@
     <modules>
         <module>house-rent</module>
         <module>spring-mvc-jxl</module>
+        <module>common-util</module>
     </modules>
 
     <properties>
