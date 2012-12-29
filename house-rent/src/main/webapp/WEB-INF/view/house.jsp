@@ -102,7 +102,7 @@
                     <td>${house.buyer}</td>
                     <td>${house.middler}</td>
                         <%--<td>${house.desc}</td>--%>
-                    <td>${house.img}</td>
+                    <td><img src="${house.img}" height="100px" width="100px"></td>
                     <td>
                             <%--<a type="button" class="btn btn-success" href="${ctx}/manage/buyHouse/${house.id}">购买</a>--%>
                         <a type="button" class="btn btn-success" href="#">购买</a>
