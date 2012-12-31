@@ -1,3 +1,0 @@
-#struts2-demo
-
-[struts2-demo1](https://github.com/luowei/demo-repo/tree/master/struts2-demo1)是一个简单的struts2的demo程序，对类型转换做了一下演示...
