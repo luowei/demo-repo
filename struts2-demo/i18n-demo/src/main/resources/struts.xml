@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
+<struts>
+	
+	<package name="struts2" extends="struts-default">
+	
+		<global-results>
+			<result name="usernameInvalid">/usernameInvalid.jsp</result>
+			<result name="passwordInvalid">/passwordInvalid.jsp</result>
+		</global-results>
+		
+		<global-exception-mappings>
+			<exception-mapping result="usernameInvalid" exception="com.struts2.exception.UsernameException"></exception-mapping>
+			<exception-mapping result="passwordInvalid" exception="com.struts2.exception.PasswordException"></exception-mapping>
+		</global-exception-mappings>
+	
+		<action name="login" class="com.struts2.struts2.LoginAction">
+			<result name="success">/result.jsp</result>
+		</action>
+		
+		<action name="userAction" class="com.struts2.struts2.UserAction">
+			<result name="success">/output.jsp</result>
+		</action>
+		
+		<action name="userAction2" class="com.struts2.struts2.UserAction2">
+			<result name="success">/output.jsp</result>
+		</action>
+		
+		<action name="register" class="com.struts2.struts2.RegisterAction">
+			<result name="success">/registerResult.jsp</result>
+			<result name="input">/register.jsp</result>
+		</action>
+		
+	</package>
+	
+</struts>
