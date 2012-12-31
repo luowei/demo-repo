@@ -17,6 +17,7 @@
         <module>shop-book</module>
         <module>struts2-demo</module>
         <module>ldap-demo</module>
+        <module>plain</module>
     </modules>
 
     <properties>
