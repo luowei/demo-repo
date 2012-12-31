@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<CATALOG>
+    <PLANT>
+        <COMMON>p1-common</COMMON>
+        <BOTANICAL>p1-botanincal</BOTANICAL>
+        <PRICE>p1-price</PRICE>
+        <LIGHT>p1-light</LIGHT>
+        <ZONE>p1-zone</ZONE>
+        <AVAILABILITY>p1-boni</AVAILABILITY>
+    </PLANT>
+</CATALOG>

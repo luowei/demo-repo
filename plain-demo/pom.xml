@@ -13,6 +13,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>fileupload-demo</module>
+        <module>core-java</module>
     </modules>
 
     <properties>

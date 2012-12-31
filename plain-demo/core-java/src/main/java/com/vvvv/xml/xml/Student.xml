@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE students [
+	<!ELEMENT students (student*)>
+	<!ELEMENT student (name,age,gender,address)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT age (#PCDATA)>
+	<!ELEMENT gender (#PCDATA)>
+	<!ELEMENT address (city,country,street)>
+	<!ELEMENT city (#PCDATA)>
+	<!ELEMENT country (#PCDATA)>
+	<!ELEMENT street (#PCDATA)>
+	<!ATTLIST student id CDATA "0">
+]>
+
+<students>
+	<student id="1">
+		<name>jd1108</name>
+		<age>1</age>
+		<gender>true</gender>
+		<address>
+			<city>Kunshan</city>
+			<country>China</country>
+			<street>Xueyuan Rd NO. 828</street>
+		</address>
+	</student>
+	<student id="2">
+		<name>briup</name>
+		<age>5</age>
+		<gender>false</gender>
+		<address>
+			<city>Shanghai</city>
+			<country>China</country>
+			<street>Wanrong Rd NO.1188</street>
+		</address>
+	</student>
+</students>
