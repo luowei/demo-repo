@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
+<struts>
+	 
+	<package name="struts2_ajax" extends="json-default">
+	
+		<action name="getXMLAction" class="com.shengsiyuan.action.xml.GetXMLAction">
+		
+		</action>
+	
+		<action name="getJsonAction" class="com.shengsiyuan.action.json.GetJsonAction">
+		
+		</action>
+		
+		<action name="getJsonAction2" class="com.shengsiyuan.action.json.GetJsonAction2">
+			<result name="success" type="json">
+				<!-- 排除掉一些属性，如果有多个，则用逗号隔开 -->
+				<param name="excludeProperties">address</param>
+			
+			</result>
+		</action>
+	
+	</package>
+	
+	
+</struts>
