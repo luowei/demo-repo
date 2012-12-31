@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  
+  <listener>
+  	<display-name>SessionListener</display-name>
+  	<listener-class>com.book.web.listener.SessionListener</listener-class>
+  </listener>
+  <listener>
+  	<display-name>ContextListener</display-name>
+  	<listener-class>com.book.web.listener.ContextListener</listener-class>
+  </listener>
+
+  <filter>
+  	<filter-name>EncodeFilter</filter-name>
+  	<filter-class>com.book.web.filter.EncodeFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>EncodeFilter</filter-name>
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterServlet</servlet-name>
+    <servlet-class>com.book.web.servlet.RegisterServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.book.web.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddBrwBookServlet</servlet-name>
+    <servlet-class>com.book.web.servlet.AddBrwBookServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ClearCartServlet</servlet-name>
+    <servlet-class>com.book.web.servlet.ClearCartServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DelBrwServlet</servlet-name>
+    <servlet-class>com.book.web.servlet.DelBrwServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>/EditBrwListServlet</servlet-name>
+    <servlet-class>com.book.web.servlet.EditBrwListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ConfirmBrwServlet</servlet-name>
+    <servlet-class>com.book.web.servlet.ConfirmBrwServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ListBrwBookServlet</servlet-name>
+    <servlet-class>com.book.web.servlet.ListBrwBookServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ListBrwListServlet</servlet-name>
+    <servlet-class>com.book.web.servlet.ListBrwListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DelBrwListServlet</servlet-name>
+    <servlet-class>com.book.web.servlet.DelBrwListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>BookDetailServlet</servlet-name>
+    <servlet-class>com.book.web.servlet.BookDetailServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>RegisterServlet</servlet-name>
+    <url-pattern>/RegisterServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddBrwBookServlet</servlet-name>
+    <url-pattern>/AddBrwBookServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ClearCartServlet</servlet-name>
+    <url-pattern>/ClearCartServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelBrwServlet</servlet-name>
+    <url-pattern>/DelBrwServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>/EditBrwListServlet</servlet-name>
+    <url-pattern>/EditBrwListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ConfirmBrwServlet</servlet-name>
+    <url-pattern>/ConfirmBrwServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListBrwBookServlet</servlet-name>
+    <url-pattern>/ListBrwBookServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ListBrwListServlet</servlet-name>
+    <url-pattern>/ListBrwListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DelBrwListServlet</servlet-name>
+    <url-pattern>/DelBrwListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>BookDetailServlet</servlet-name>
+    <url-pattern>/BookDetailServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

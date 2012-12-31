@@ -13,6 +13,7 @@
         <module>spring-mvc-jxl</module>
         <module>common-util</module>
         <module>vvvv-book</module>
+        <module>borrow-book</module>
     </modules>
 
     <properties>
