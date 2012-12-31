@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="struts2" location="90,18" size="225,124">
+    <action name="login" location="65,73" size="150,41">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="result.jsp" />
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="login.jsp" />
+      </result>
+    </action>
+    <action name="login2" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="result.jsp" />
+      </result>
+    </action>
+    <action name="userAction" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="output.jsp" />
+      </result>
+    </action>
+    <action name="userAction2" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="output.jsp" />
+      </result>
+    </action>
+    <action name="register" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="1" target="registerResult.jsp">
+          <bendpoint location="708,301" dim1="525,38" dim2="135,201" />
+        </resourceEdge>
+      </result>
+      <result name="input">
+        <resourceEdge source="input" routing="0" target="register.jsp" />
+      </result>
+    </action>
+    <action name="action1" location="0,0" size="0,0">
+      <result name="success" />
+    </action>
+    <action name="action2" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="action2.jsp" />
+      </result>
+    </action>
+    <action name="token" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="tokenSuccess.jsp" />
+      </result>
+      <result name="invalid.token">
+        <resourceEdge source="invalid.token" routing="0" target="tokenFail.jsp" />
+      </result>
+    </action>
+    <action name="fileUpload" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="fileUploadResult.jsp" />
+      </result>
+    </action>
+    <action name="fileUpload2" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="fileUploadResult2.jsp" />
+      </result>
+    </action>
+  </package>
+  <package name="hello" location="0,0" size="0,0">
+    <action name="namespaceAction" location="0,0" size="0,0">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="output.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="result.jsp" path="/result.jsp" location="21,330" size="150,55" />
+  <webResource name="output.jsp" path="/output.jsp" location="387,35" size="0,0" />
+  <webResource name="registerResult.jsp" path="/registerResult.jsp" location="646,14" size="0,0" />
+  <webResource name="register.jsp" path="/register.jsp" location="474,339" size="0,0" />
+  <webResource name="usernameInvalid.jsp" path="/usernameInvalid.jsp" location="0,0" size="0,0" />
+  <webResource name="login.jsp" path="/login.jsp" location="0,0" size="0,0" />
+  <webResource name="action2.jsp" path="/action2.jsp" location="0,0" size="0,0" />
+  <webResource name="tokenSuccess.jsp" path="/tokenSuccess.jsp" location="0,0" size="0,0" />
+  <webResource name="tokenFail.jsp" path="/tokenFail.jsp" location="0,0" size="0,0" />
+  <webResource name="output.jsp" path="output.jsp" location="0,0" size="0,0" />
+  <webResource name="fileUploadResult.jsp" path="/fileUploadResult.jsp" location="0,0" size="0,0" />
+  <webResource name="fileUploadResult2.jsp" path="/fileUploadResult2.jsp" location="0,0" size="0,0" />
+</Struts2Diagram>
+

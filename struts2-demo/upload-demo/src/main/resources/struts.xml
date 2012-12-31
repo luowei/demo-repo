@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
+<struts>
+	
+	<!-- 
+	<constant name="struts.multipart.maxSize" value="1048576000"></constant>
+	 -->
+	 
+	<package name="struts2" extends="struts-default">
+	
+		<interceptors>
+			<interceptor name="theInterceptor1" class="com.vvvv.interceptor.TheInterceptor1">
+				<param name="test">vvvv</param>
+			</interceptor>
+			
+			<interceptor name="theInterceptor2" class="com.vvvv.interceptor.TheInterceptor2">
+			</interceptor>
+			
+			<interceptor name="theInterceptor3" class="com.vvvv.interceptor.TheInterceptor3">
+			</interceptor>
+			
+			<interceptor name="loginInterceptor" class="com.vvvv.interceptor.LoginInterceptor">
+			</interceptor>
+			
+			<interceptor-stack name="myDefaultInterceptorStack">
+			<!-- 	<interceptor-ref name="loginInterceptor"></interceptor-ref> -->
+				<interceptor-ref name="defaultStack"></interceptor-ref>
+			</interceptor-stack>
+			
+		</interceptors>
+		
+		<default-interceptor-ref name="myDefaultInterceptorStack"></default-interceptor-ref>
+	
+	
+		<global-results>
+			<result name="usernameInvalid">/usernameInvalid.jsp</result>
+			<result name="passwordInvalid">/passwordInvalid.jsp</result>
+			<result name="login">/error.jsp</result>
+		</global-results>
+		
+		<global-exception-mappings>
+			<exception-mapping result="usernameInvalid" exception="com.vvvv.exception.UsernameException"></exception-mapping>
+			<exception-mapping result="passwordInvalid" exception="com.vvvv.exception.PasswordException"></exception-mapping>
+		</global-exception-mappings>
+	
+		<action name="login" class="com.vvvv.struts2.LoginAction">
+			<result name="success" type="dispatcher">/result.jsp</result>
+			<result name="input">/login.jsp</result>
+		</action>
+		
+		<action name="login2" class="com.vvvv.struts2.LoginAction2">
+			<result name="success">/result.jsp</result>
+		</action>
+		
+		<action name="userAction" class="com.vvvv.struts2.UserAction">
+			<result name="success">/output.jsp</result>
+		</action>
+		
+		<action name="userAction2" class="com.vvvv.struts2.UserAction2">
+			<result name="success">/output.jsp</result>
+		</action>
+		
+		<action name="register" class="com.vvvv.struts2.RegisterAction" method="myExecute">
+			<result name="success">/registerResult.jsp</result>
+			<result name="input">/register.jsp</result>
+		</action>
+		
+		<action name="action1" class="com.vvvv.struts2.Action1" method="myExecute">
+			<result name="success" type="chain">
+				<param name="actionName">action2</param>
+				<param name="username">${username}</param>
+				<param name="password">${password}</param>
+				<param name="usernameAndPassword">${usernameAndPassword}</param>
+			</result>
+			
+			<interceptor-ref name="theInterceptor1"></interceptor-ref>
+			<interceptor-ref name="theInterceptor2"></interceptor-ref>
+			<interceptor-ref name="theInterceptor3">
+				<param name="includeMethods">execute, myExecute</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+		
+		<action name="action2" class="com.vvvv.struts2.Action2">
+			<result name="success">/action2.jsp</result>
+		</action>
+		
+		<action name="token" class="com.vvvv.struts2.TokenAction">
+			<result name="success">/tokenSuccess.jsp</result>
+			<result name="invalid.token">/tokenFail.jsp</result>
+			
+			<interceptor-ref name="token"></interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			
+		</action>
+		
+		<action name="fileUpload" class="com.vvvv.struts2.UploadAction">
+			<result name="success">/fileUploadResult.jsp</result>
+		</action>
+		
+		<action name="fileUpload2" class="com.vvvv.struts2.UploadAction2">
+			<result name="success">/fileUploadResult2.jsp</result>
+		</action>
+		
+		<action name="downloadFile2" class="com.vvvv.struts2.DownloadAction2">
+			<result type="stream"><!-- 动态的获得文件的名字 -->
+				<param name="contentDisposition">attachment;filename=${filename}</param>
+				<param name="inputName">downloadFile</param>
+			</result>
+		</action>
+	
+	</package>
+	
+	<package name="hello" extends="struts-default" namespace="/theNamespace">
+	
+		<action name="namespaceAction" class="com.vvvv.struts2.NamespaceAction">
+			<result name="success">output.jsp</result>
+		</action>
+	
+	</package>
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+</struts>
