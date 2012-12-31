@@ -14,6 +14,7 @@
         <module>common-util</module>
         <module>vvvv-book</module>
         <module>borrow-book</module>
+        <module>shop-book</module>
     </modules>
 
     <properties>
