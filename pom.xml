@@ -14,10 +14,10 @@
         <module>common-util</module>
         <module>vvvv-book</module>
         <module>borrow-book</module>
-        <module>shop-book</module>
         <module>struts2-demo</module>
         <module>ldap-demo</module>
-        <module>plain</module>
+        <module>plain-demo</module>
+        <module>jsf-demo</module>
     </modules>
 
     <properties>
