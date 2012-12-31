@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindAllBookTypeServlet</servlet-name>
+    <servlet-class>com.vvvv.servlet.bookType.FindAllBookTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SaveBookTypeServlet</servlet-name>
+    <servlet-class>com.vvvv.servlet.bookType.SaveBookTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindAllBookInfoServlet</servlet-name>
+    <servlet-class>com.vvvv.servlet.bookInfo.FindAllBookInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SaveBookInfoServlet</servlet-name>
+    <servlet-class>com.vvvv.servlet.bookInfo.SaveBookInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UpdateBookInfoServlet</servlet-name>
+    <servlet-class>com.vvvv.servlet.bookInfo.UpdateBookInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindBookInfoByIdServlet</servlet-name>
+    <servlet-class>com.vvvv.servlet.bookInfo.FindBookInfoByIdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>SetBookUnavailableServlet</servlet-name>
+    <servlet-class>com.vvvv.servlet.bookInfo.SetBookUnavailableServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteBookInfoServlet</servlet-name>
+    <servlet-class>com.vvvv.servlet.bookInfo.DeleteBookInfoServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InitBookTypeServlet</servlet-name>
+    <servlet-class>com.vvvv.servlet.bookInfo.InitBookTypeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>FindBookTypeByIdServlet</servlet-name>
+    <servlet-class>com.vvvv.servlet.bookType.FindBookTypeByIdServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InitIndexServlet</servlet-name>
+    <servlet-class>com.vvvv.servlet.InitIndexServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ShowFrontBookInfoServlet</servlet-name>
+    <servlet-class>com.vvvv.servlet.bookInfo.ShowFrontBookInfoServlet</servlet-class>
+  </servlet>
+
+
+
+
+
+
+
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>FindAllBookTypeServlet</servlet-name>
+    <url-pattern>/FindAllBookTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SaveBookTypeServlet</servlet-name>
+    <url-pattern>/SaveBookTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindAllBookInfoServlet</servlet-name>
+    <url-pattern>/FindAllBookInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SaveBookInfoServlet</servlet-name>
+    <url-pattern>/SaveBookInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UpdateBookInfoServlet</servlet-name>
+    <url-pattern>/UpdateBookInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindBookInfoByIdServlet</servlet-name>
+    <url-pattern>/FindBookInfoByIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SetBookUnavailableServlet</servlet-name>
+    <url-pattern>/SetBookUnavailableServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteBookInfoServlet</servlet-name>
+    <url-pattern>/DeleteBookInfoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InitBookTypeServlet</servlet-name>
+    <url-pattern>/InitBookTypeServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>FindBookTypeByIdServlet</servlet-name>
+    <url-pattern>/FindBookTypeByIdServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InitIndexServlet</servlet-name>
+    <url-pattern>/InitIndexServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ShowFrontBookInfoServlet</servlet-name>
+    <url-pattern>/ShowFrontBookInfoServlet</url-pattern>
+  </servlet-mapping>
+  <welcome-file-list>
+    <welcome-file>MyJsp.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
