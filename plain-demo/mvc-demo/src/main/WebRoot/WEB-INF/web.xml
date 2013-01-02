@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	<servlet>
+		<servlet-name>mvc</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<!-- 配置参数，告诉spring mvc到哪里去找配置controller的配置文件 -->
+		<init-param>
+			<param-name>contextConfigLocation</param-name>
+			<!-- 当有多个配置文件时，使用逗号分隔 ,或以通配符的形式，加载多个相似的配置文件-->
+			<!-- 
+			<param-value>/WEB-INF/classes/servlet.xml,/WEB-INF/classes/servlet2.xml</param-value>
+			 -->
+			 <param-value>/WEB-INF/classes/spring/*.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>mvc</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+	
+	
+  <!-- 所有以 .do 结尾的请求都会发送到这个控制中心 -->
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

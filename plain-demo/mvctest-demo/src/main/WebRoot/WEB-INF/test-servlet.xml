@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	
+	<!-- 定义映射器 -->
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="start.test">startController</prop><!-- key是url,text是控制器的名称 -->
+				<prop key="login.test">loginController</prop>
+				<prop key="to_add.test">addEmpController</prop>
+				<prop key="add_emp.test">addEmpController</prop>
+				<!-- <prop key="add.test">addEmpSuccController</prop> -->
+			</props>
+		</property>
+	</bean>
+	
+	<bean id="startController" class="test.StartController"></bean>
+	
+	<!-- 给loginController配置一个参数化的视图控制器类 --><!-- 
+	<bean id="loginController" class="org.springframework.web.servlet.mvc.ParameterizableViewController">
+		<property name="viewName" value="login"></property> --><!-- 返回一个名称叫login的视图 -->
+	<!-- </bean> -->
+	
+	<!-- 给loginController配置一个按url文件名决定的一个控制器,这样可以省去配置视图名的过程 -->
+	<bean id="loginController" class="org.springframework.web.servlet.mvc.UrlFilenameViewController"/>
+	
+	<!-- ==================================================== -->
+	<!-- 一个url对应一个controller的情况
+	<bean id="addEmpController" class="org.springframework.web.servlet.mvc.UrlFilenameViewController"/>
+	 -->
+	
+	<!-- 命令控制器 --><!-- 
+	<bean id="addEmpSuccController" class="test.EmpController">
+		<property name="commandClass" value="test.Emp"></property> -->	<!-- 指定command对象的类别 -->
+	 <!-- </bean> --> 
+	
+	<!-- ==================================================== -->
+	<!-- 表单控制器，使用一个controller对应多个url处理 --><!-- 
+	<bean id="addEmpController" class="test.EmpFormController">
+		<property name="commandClass" value="test.Emp"/> --><!-- 它也需要command对象是什么类别 -->
+		<!-- <property name="formView" value="add_emp"/> --><!-- 表单提交页面 -->
+		<!-- <property name="successView" value="success"/> --><!-- 表单成功页面 --><!-- 
+	</bean> -->
+	
+	<!-- MultiController -->	
+	<bean id="addEmpController" class="test.EmpMultiController">
+		<property name="commandClass" value="test.Emp"/>
+		<property name="methodNameResolver">
+			<!-- 按照参数进行方法名的解析器 -->
+			<bean class="org.springframework.web.servlet.mvc.multiaction.ParameterMethodNameResolver">
+				<property name="paramName" value="func"></property>	<!-- 此参数决定调用哪一个方法名 -->
+			</bean>
+		</property>
+	</bean>
+	
+	<!-- 基于类名映射的controller -->
+	<!-- <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+	 -->
+	
+	<!-- 配置url解析器 -->
+	<bean class="org.springframework.web.servlet.view.UrlBasedViewResolver">
+		<!-- 视图处理类 -->
+		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"></property>
+		<property name="prefix" value="/WEB-INF/jsp/"/><!-- 返回的逻辑名称的前缀 -->
+		<property name="suffix" value=".jsp"/><!-- 返回的逻辑名称的后缀 -->
+	</bean>
+	
+</beans>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
