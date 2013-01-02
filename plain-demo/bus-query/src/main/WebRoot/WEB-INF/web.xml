@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  <!-- servlet 主要是配置servlet对象的标签 主要是告诉服务有此servlet存在-->
+    <servlet>
+    	<!--servlet-name:别名 -->
+        <servlet-name>indexServlet</servlet-name>
+        <!--servlet-class:对象所在的路径 -->
+        <servlet-class>
+         servlet.IndexServlet
+        </servlet-class>
+        <init-param>
+            <param-name>debug</param-name>
+            <param-value>0</param-value>
+        </init-param>
+        <init-param>
+        <param-name>zhangsan</param-name>
+         <param-value>21</param-value>
+        </init-param>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    
+     <servlet>
+    	<!--servlet-name:别名 -->
+        <servlet-name>CarServlet</servlet-name>
+        <!--servlet-class:对象所在的路径 -->
+        <servlet-class>
+         servlet.CarServlet
+        </servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    
+     <servlet>
+    	<!--servlet-name:别名 -->
+        <servlet-name>SelectServlet</servlet-name>
+        <!--servlet-class:对象所在的路径 -->
+        <servlet-class>
+         servlet.SelectServlet
+        </servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    
+    <!-- 在什么情况下使用此servlet对象 -->
+    <servlet-mapping>
+    <servlet-name>indexServlet</servlet-name>
+    <url-pattern>/cartype</url-pattern>
+    </servlet-mapping>
+    
+      <servlet-mapping>
+    <servlet-name>CarServlet</servlet-name>
+    <url-pattern>/car</url-pattern>
+    </servlet-mapping>
+    
+     <servlet-mapping>
+    <servlet-name>SelectServlet</servlet-name>
+    <url-pattern>/select</url-pattern>
+    </servlet-mapping>
+</web-app>

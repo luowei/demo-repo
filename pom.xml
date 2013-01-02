@@ -18,6 +18,7 @@
         <module>ldap-demo</module>
         <module>plain-demo</module>
         <module>jsf-demo</module>
+        <module>se_han-demo</module>
     </modules>
 
     <properties>
