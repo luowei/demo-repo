@@ -1,5 +1,6 @@
 
 #首先，以下是常用命令：
+
 ③　initdb 初始化 数据库。
 ④　pg_ctl start 启动数据库
 ⑤　pg_ctl stop 停止数据库
@@ -16,6 +17,7 @@ http://www.enterprisedb.com/products/pgbindownload.do
 免安装的，直接解压到硬盘的一个目录下。笔者在d:\pgsql
 
 #二、设置环境变量，可以把以下内容写成一个BAT
+
 set PGHOME=d:\pgsql
 set PATH=%PGHOME%\bin;%path%
 set PGHOST=localhost
@@ -23,6 +25,7 @@ set PGLIB=%PGHOME%\lib
 set PGDATA=%PGHOME%\data
 
 ##笔者把它们写成了inst.bat
+
 D:\pgsql>inst
 D:\pgsql>set PGHOME=d:\pgsql
 D:\pgsql>set PATH=d:\pgsql\bin;d:\pgsql\bin;d:\pgsql\bin;C:\Windows\system32;C:\
@@ -34,6 +37,7 @@ D:\pgsql>set PGLIB=d:\pgsql\lib
 D:\pgsql>set PGDATA=d:\pgsql\data
 
 #三、初始化数据库
+
 D:\pgsql>initdb --locale=C
 The files belonging to this database system will be owned by user "Administrator
 ".
@@ -67,19 +71,24 @@ or
     "pg_ctl" -D "d:/pgsql/data" -l logfile start
 
 #四、启动
+
 D:\pgsql>pg_ctl start
 
 #五、重新开一个MSDOS窗口
+
 ##创建数据库,以mydb为例
+
 D:\pgsql>createdb -h 127.0.0.1 mydb
 
 ##创建用户
+
 D:\pgsql>createuser -h 127.0.0.1 deepfuture
 Shall the new role be a superuser? (y/n) y
 D:\pgsql>
 D:\pgsql>
 
 #六、启动图形界面开始管理
+
 启动pgAdmin3.exe程序进行配置（在BIN目录下）
 ![1](https://raw.github.com/luowei/demo-repo/blob/master/doc/img/postgresql_admin_1.jpg)
 
