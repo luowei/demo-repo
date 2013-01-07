@@ -101,6 +101,6 @@ D:\pgsql>
 
 #六、启动图形界面开始管理
 启动pgAdmin3.exe程序进行配置（在BIN目录下）
-![1](https://raw.github.com/luowei/demo-repo/blob/master/doc/img/db/postgresql_admin_1.jpg)
+![1](https://raw.github.com/luowei/demo-repo/master/doc/img/db/postgresql_admin_1.jpg)
 
-![2](https://raw.github.com/luowei/demo-repo/blob/master/doc/img/db/postgresql_admin_1.jpg)
+![2](https://raw.github.com/luowei/demo-repo/master/doc/img/db/postgresql_admin_1.jpg)
