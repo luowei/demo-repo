@@ -19,6 +19,7 @@
         <module>plain-demo</module>
         <module>jsf-demo</module>
         <module>se_han-demo</module>
+        <module>view-demo</module>
     </modules>
 
     <properties>
