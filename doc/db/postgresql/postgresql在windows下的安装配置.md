@@ -1,13 +1,21 @@
 
 #首先，以下是常用命令：
 ③　initdb 初始化 数据库。
+
 ④　pg_ctl start 启动数据库
+
 ⑤　pg_ctl stop 停止数据库
+
 ⑥　post_svc -install 建立windows nt 服务（需要设置系统环境变量）
+
 ⑦　post_svc -remove 删除 windows nt 服务
+
 ⑧　使用"createdb 库名" 新建数据库
+
 ⑨　使用"createuser 用户名"创建数据库帐号
+
 ⑩　使用"psql -h localhost -d 库名- U 用户名"进入数据库
+
 接着来讲解:
 
 #一、下载postgresql for windows
@@ -93,6 +101,6 @@ D:\pgsql>
 
 #六、启动图形界面开始管理
 启动pgAdmin3.exe程序进行配置（在BIN目录下）
-![1](https://raw.github.com/luowei/demo-repo/blob/master/doc/img/postgresql_admin_1.jpg)
+![1](https://raw.github.com/luowei/demo-repo/blob/master/doc/img/db/postgresql_admin_1.jpg)
 
-![2](https://raw.github.com/luowei/demo-repo/blob/master/doc/img/postgresql_admin_2.jpg)
+![2](https://raw.github.com/luowei/demo-repo/blob/master/doc/img/db/postgresql_admin_1.jpg)
