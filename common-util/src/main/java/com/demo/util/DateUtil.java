@@ -15,6 +15,9 @@ import java.util.GregorianCalendar;
  * Time: 下午8:14
  * To change this template use File | Settings | File Templates.
  */
+import static java.util.Calendar.DAY_OF_YEAR;
+import static java.util.Calendar.ERA;
+import static java.util.Calendar.YEAR;
 public abstract class DateUtil {
 
     public static String yyyy_MM_dd = "yyyy-MM-dd";
@@ -225,6 +228,45 @@ public abstract class DateUtil {
         //System.out.println(getFormatDateTime(date, "yyyy-MM-dd HH:mm:ss"));
         SimpleDateFormat sdf = new SimpleDateFormat(format);
         return sdf.format(date);
+    }
+
+    public static Calendar getDayBefore(final Calendar target) {
+        target.add(Calendar.DAY_OF_YEAR, -1);
+        return target;
+    }
+
+    public static boolean isSameDay(final Calendar firstCal, final Calendar secondCal) {
+        return (firstCal.get(ERA) == secondCal.get(ERA) &&
+                firstCal.get(YEAR) == secondCal.get(YEAR) &&
+                firstCal.get(DAY_OF_YEAR) == secondCal.get(DAY_OF_YEAR));
+    }
+
+    public static boolean isSameDay(final Date firstDate, final Date secondDate) {
+        final Calendar firstCal = Calendar.getInstance();
+        final Calendar secondCal = Calendar.getInstance();
+        firstCal.setTime(firstDate);
+        secondCal.setTime(secondDate);
+        return isSameDay(firstCal, secondCal);
+    }
+
+    public static boolean isToday(final Calendar queryCal) {
+        return isSameDay(Calendar.getInstance(), queryCal);
+    }
+
+    public static boolean isToday(final Date queryDate) {
+        final Calendar queryCal = Calendar.getInstance();
+        queryCal.setTime(queryDate);
+        return isToday(queryCal);
+    }
+
+    public static boolean isYesterday(final Calendar queryCal) {
+        return isSameDay(getDayBefore(Calendar.getInstance()), queryCal);
+    }
+
+    public static boolean isYesterday(final Date queryDate) {
+        final Calendar queryCal = Calendar.getInstance();
+        queryCal.setTime(queryDate);
+        return isYesterday(queryCal);
     }
 
     public static void main(String[] args) {
