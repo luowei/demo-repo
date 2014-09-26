@@ -18,4 +18,13 @@
 [ldap-demo](https://github.com/luowei/demo-repo/tree/master/spring-mvc-jx/ldap-demo)包含了一个ldap的测试程序;
 
 
+**视频讲解代码分析**
+
+[1.demo-repo之brrow-book&commons-util代码分析](http://www.tudou.com/programs/view/ehujdGRiueI/)
+
+[2.demo-repo之house-rent...代码分析](http://www.tudou.com/programs/view/B7xvk1AQkLo/)
+
+[3.demo-repo之struts2-demo&plain-demo](http://www.tudou.com/programs/view/BfASVWRLc20/)
+
+[4.demo-repo之se-han-demo](http://www.tudou.com/programs/view/oJPb9KbN8jk/)
 
